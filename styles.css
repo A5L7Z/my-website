@@ -1,0 +1,171 @@
+/* General Styles */
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #222;
+  --light-color: #f9f9f9;
+  --dark-color: #333;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(to bottom right, var(--primary-color), #3a8df4);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  margin-top: 2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.cta-btn:hover {
+  background: var(--dark-color);
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 1rem;
+  background: var(--light-color);
+  text-align: center;
+}
+
+/* Features Section */
+.features-section {
+  padding: 4rem 1rem;
+  background: white;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 1.5rem;
+  background: var(--light-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 1rem;
+  background: var(--light-color);
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-form button:hover {
+  background: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+  }
+}
